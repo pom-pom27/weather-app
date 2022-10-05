@@ -14,7 +14,7 @@ const DailyForecast = ({ latLng }: IDailyForecast) => {
     `https://api.openweathermap.org/data/2.5/onecall?lat=${latLng?.lat}&lon=${latLng?.lon}&appid=${API_KEY}&exclude=hourly,minutely&units=metric`
   );
 
-  if (error) return <p>There is an error. {error?.message}</p>;
+  if (error) return <p>There is an error, {error?.message}</p>;
   if (!data)
     return (
       <div className="flex-1 flex justify-center items-center">

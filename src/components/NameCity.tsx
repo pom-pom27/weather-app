@@ -11,7 +11,7 @@ const NameCity = ({ latLng }: INameCity) => {
   //fetch name city from lat long
 
   const { data, error } = useFetch<Geocoding[]>(
-    `http://api.openweathermap.org/geo/1.0/reverse?lat=${latLng?.lat}&lon=${latLng?.lon}&limit=1&appid=${API_KEY}`
+    `https://api.openweathermap.org/geo/1.0/reverse?lat=${latLng?.lat}&lon=${latLng?.lon}&limit=1&appid=${API_KEY}`
   );
 
   if (error) return <div className="font-bold text-lg ">{error.message}</div>;
